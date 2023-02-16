@@ -21,9 +21,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "public")));
 
 app.get("/", function (req, res) {
-  res.render("index");
+  res.render("index", { title: "Welcome" });
 });
 
 app.get("/about", function (req, res) {
-  res.render("about");
+  res.render("about", { title: "About Us" });
 });
