@@ -1,7 +1,38 @@
-doctype html
-html(lang='en')
+doctype html  
+html
     head
-        meta(charset='utf-8')
-        title my pug template
+    meta(charset='utf-8')
+    title my pug template
+    link(rel="stylesheet" href="/css/bootstrap.css", attr)
     body
+        nav.navbar.navbar-expand-lg.navbar-dark.bg-dark(aria-label='Fifth navbar example')
+            .container-fluid
+                a.navbar-brand(href='#') PC Repairs
+                button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarsExample05' aria-controls='navbarsExample05' aria-expanded='false' aria-label='Toggle navigation')
+                    span.navbar-toggler-icon
+                #navbarsExample05.collapse.navbar-collapse
+                    ul.navbar-nav.me-auto.mb-2.mb-lg-0
+                        li.nav-item
+                            a.nav-link.active(aria-current='page' href='home') Home
+                        li.nav-item
+                            a.nav-link(href='about') About
+                        li.nav-item.dropdown
+                            a.nav-link.dropdown-toggle(href='#' data-bs-toggle='dropdown' aria-expanded='false') Services
+                    ul.dropdown-menu
+                        li
+                            a.dropdown-item(href='#') Computer Repairs
+                        li
+                            a.dropdown-item(href='#') Virus Removal
+                        li
+                            a.dropdown-item(href='#') PC Upgrade
+                    form(role='search')
+                        input.form-control(type='search' placeholder='Search' aria-label='Search')
+
+
         block content
+
+        hr
+
+        footer.container.text-center
+            p @ company 2021 - 2023
+        script(src="js/bootstrap.js")
